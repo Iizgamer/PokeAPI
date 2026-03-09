@@ -19,12 +19,13 @@ async function fetchData() {
   }
 };
 
+const imgElement = document.getElementById("pokemonSprite")
 const btn = document.getElementById('btn');
 const pokemonName = document.getElementById("pokemonName");
 const errorMessage = document.getElementById("errorMessage");
 
 function handleSearch() {
-    if (pokemonName.value.lenth == 0) {
+    if (pokemonName.value.length == 0) {
         errorMessage.innerHTML = 'You must enter something in order to search.';
         imgElement.style.display = 'none';
     } else if (/^[a-zA-Z-]+$/.test(pokemonName.value) === false) {
